@@ -1,7 +1,7 @@
 <div class="container mt-4">
   <h1>What movie will you add?</h1>
-  <%= simple_form_for [@movie, @list, @bookmark] do |f| %>
-    <%= f.input :movie, collection: Movie.all %>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
     <%= f.input :comment %>
     <%= f.submit "Submit chosen movie", class: "btn btn-primary" %>
   <% end %>
